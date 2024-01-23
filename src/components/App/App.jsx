@@ -12,8 +12,17 @@ const App = () =>{
     const [suggestedNames, setsuggestedNames] = useState([]);
 
     const handleInputChange = (inputText) =>{
-        setheaderExpanded(!inputText);
-        setsuggestedNames(inputText ? name(inputText) : []);
+        if(typeof inputText === 'string'){
+            if(inputText.length > 0){
+                setsuggestedNames(name(inputText));
+            }
+            else{
+                setsuggestedNames([]);
+            }
+        }
+        else{
+            setheaderExpanded(false);
+        }
     };
     return(
         <>
