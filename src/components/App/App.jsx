@@ -10,10 +10,10 @@ const App = () =>{
     const headerText = useState('Name It!');
     const [headerExpanded, setheaderExpanded] = useState(true);
     const [suggestedNames, setsuggestedNames] = useState([]);
- 
+
     const handleInputChange = (inputText) =>{
-        setheaderExpanded(!(inputText.length > 0));
-        setsuggestedNames(inputText.length > 0 ? name(inputText) : []);
+        setheaderExpanded(!inputText);
+        setsuggestedNames(inputText ? name(inputText) : []);
     };
     return(
         <>
