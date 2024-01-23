@@ -14,3 +14,4 @@ const ResultsContainer = ({suggestedNames}) => {
 };
 
 export default ResultsContainer;
+
