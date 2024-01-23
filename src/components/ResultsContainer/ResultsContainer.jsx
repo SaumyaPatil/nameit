@@ -4,8 +4,10 @@ import NameCard from '../NameCard/NameCard';
 
 const ResultsContainer = ({suggestedNames}) => {
 
-  const suggestedNameJsx = suggestedNames.map((suggestedName) =>{
-    return <NameCard key={suggestedName} suggestedName={suggestedName}/>
+  const uniqueSuggestedNames = [...new Set(suggestedNames)];
+
+  const suggestedNameJsx = uniqueSuggestedNames.map((suggestedName) => {
+      return <NameCard key={suggestedName} suggestedName={suggestedName} />;
   });
 
   return (
@@ -14,4 +16,3 @@ const ResultsContainer = ({suggestedNames}) => {
 };
 
 export default ResultsContainer;
-
