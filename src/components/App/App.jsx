@@ -21,7 +21,6 @@ const App = () =>{
                 setsuggestedNames([]);
             }
         }     
-        console.log(name(inputText));
     };
 
     return(
