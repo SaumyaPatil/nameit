@@ -12,6 +12,7 @@ const App = () =>{
     const [suggestedNames, setsuggestedNames] = useState([]);
 
     const handleInputChange = (inputText) =>{
+        setheaderExpanded(!inputText);
         if(typeof inputText === 'string'){
             if(inputText.length > 0){
                 setsuggestedNames(name(inputText));
@@ -19,11 +20,10 @@ const App = () =>{
             else{
                 setsuggestedNames([]);
             }
-        }
-        else{
-            setheaderExpanded(false);
-        }
+        }     
+        console.log(name(inputText));
     };
+
     return(
         <>
             <Header headerExpanded={headerExpanded} headTitle={headerText}/>
