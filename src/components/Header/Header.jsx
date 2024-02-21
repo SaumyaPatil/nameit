@@ -15,4 +15,3 @@ const Header = ({headTitle, headerExpanded}) => {
 }
 
 export default Header;
-
