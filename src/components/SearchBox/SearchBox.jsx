@@ -10,4 +10,3 @@ const SearchBox = ({onInputChange}) => {
 }
 
 export default SearchBox;
-
